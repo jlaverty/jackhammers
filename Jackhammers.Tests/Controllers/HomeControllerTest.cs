@@ -1,7 +1,5 @@
-﻿using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
-using Jackhammers.Controllers;
+﻿using Jackhammers.Controllers;
+using Xunit;
 
 namespace Jackhammers.Tests.Controllers
 {
@@ -11,14 +9,13 @@ namespace Jackhammers.Tests.Controllers
         public void Index()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            var controller = new HomeController();
 
             // Act
-            ViewResult result = controller.Index() as ViewResult;
+            var result = controller.Index();
 
             // Assert
-            Assert.IsNotNull(result);
-            Assert.AreEqual("Home Page", result.ViewBag.Title);
+            Assert.NotNull(result);
         }
     }
 }
