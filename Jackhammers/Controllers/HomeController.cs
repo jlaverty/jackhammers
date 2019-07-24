@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System;
+using System.Web.Http;
 
 namespace Jackhammers.Controllers
 {
@@ -8,5 +9,11 @@ namespace Jackhammers.Controllers
         {
             return Ok();
         }
+
+        public IHttpActionResult ThrowException()
+        {
+            throw new InvalidOperationException();
+        }
+
     }
 }
