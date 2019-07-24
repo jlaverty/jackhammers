@@ -5,4 +5,6 @@ $body = @{
 "description" = "Jenkins"
 "target_url" = "https://3d36289d.ngrok.io/job/ci_demo/{$env::BUILD_NUMBER}/console"
 }
+
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-RestMethod -Method 'Post' -Uri $uri -ContentType "application/json" -Body $body
