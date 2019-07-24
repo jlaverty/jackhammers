@@ -17,5 +17,10 @@ namespace Jackhammers.Tests.Controllers
             // Assert
             Assert.NotNull(result);
         }
+
+        [Fact]
+        public void Test1()
+        {
+        }
     }
 }
